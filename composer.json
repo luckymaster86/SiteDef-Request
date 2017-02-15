@@ -1,0 +1,17 @@
+{
+    "name": "LuckyMaster/SiteDef/Request",
+    "description": "Логирование данных о запросах к сайту в бд",
+    "authors": [
+        {
+            "name": "LuckyMaster",
+            "email": "luckymaster@ukr.net"
+        }
+    ],
+    "minimum-stability": "stable",     
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "LuckyMaster\\SiteDef\\Request\\": "src\\"
+        }
+    }
+}
