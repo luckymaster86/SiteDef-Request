@@ -10,9 +10,8 @@
     "minimum-stability": "dev",     
     "require": {},
     "autoload": {
-        "psr-4": {
-            "LuckyMaster\\SiteDef\\Request\\AboutRequest": "src\\AboutRequest",
-            "LuckyMaster\\SiteDef\\Request\\SiteRequestLogger": "src\\SiteRequestLogger"
-        }
+        "classmap": ["src/"]
+            
+        
     }
 }
