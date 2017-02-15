@@ -6,20 +6,15 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit18f758803eeed304fc8a9697fe78ebfe
 {
-    public static $prefixesPsr0 = array (
-        'L' => 
-        array (
-            'LuckyMaster\\SiteDef\\Request\\' => 
-            array (
-                0 => __DIR__ . '/../..' . '/src',
-            ),
-        ),
+    public static $classMap = array (
+        'LuckyMaster\\SiteDef\\Request\\AboutRequest' => __DIR__ . '/../..' . '/src/AboutRequest.php',
+        'LuckyMaster\\SiteDef\\Request\\SiteRequestLogger' => __DIR__ . '/../..' . '/src/SiteRequestLogger.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInit18f758803eeed304fc8a9697fe78ebfe::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit18f758803eeed304fc8a9697fe78ebfe::$classMap;
 
         }, null, ClassLoader::class);
     }

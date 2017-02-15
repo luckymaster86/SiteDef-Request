@@ -19,7 +19,7 @@ class SiteRequestLogger {
      */
     public static  function logRequestData(\PDO $pdo){
         self::$db = $pdo;
-        self::$request = new \LuckyMaster\SiteDef\AboutRequest();
+        self::$request = new \LuckyMaster\SiteDef\Request\AboutRequest();
         
         $sql = "INSERT INTO siteRequestLog(userAgent, ip, url, cookie, remotePort, remoteAddress, requestMethod, requestTime, PHPSESSID, referer) "
                 . "values (:userAgent, :ip, :url, :cookie, :remotePort, :remoteAddress, :requestMethod, :requestTime, :PHPSESSID, :referer)";
