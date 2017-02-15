@@ -1,5 +1,5 @@
 {
-    "name": "LuckyMaster/SiteDef/Request",
+    "name": "LuckyMaster/SiteDef-Request",
     "description": "Логирование данных о запросах к сайту в бд",
     "authors": [
         {
