@@ -10,8 +10,8 @@
     "minimum-stability": "dev",     
     "require": {},
     "autoload": {
-        "classmap": ["src/"]
-            
-        
+        "psr-0": {
+            "LuckyMaster\\SiteDef\\Request\\": "src/"
+        }
     }
 }
