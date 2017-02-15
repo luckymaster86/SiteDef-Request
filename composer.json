@@ -7,11 +7,12 @@
             "email": "luckymaster@ukr.net"
         }
     ],
-    "minimum-stability": "stable",     
+    "minimum-stability": "dev",     
     "require": {},
     "autoload": {
         "psr-4": {
-            "LuckyMaster\\SiteDef\\Request\\": "src\\"
+            "LuckyMaster\\SiteDef\\Request\\AboutRequest": "src\\AboutRequest",
+            "LuckyMaster\\SiteDef\\Request\\SiteRequestLogger": "src\\SiteRequestLogger"
         }
     }
 }
