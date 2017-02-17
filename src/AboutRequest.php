@@ -26,6 +26,7 @@ class AboutRequest {
                             'setIp',
                             'setUrl',
                             'setCookie',
+                            'setReferer',
                             'setRemotePort',
                             'setRemoteAdrress',
                             'setRequestMethod',
