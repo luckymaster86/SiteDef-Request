@@ -9,6 +9,7 @@ class AboutRequest {
     private $userAgent = '';
     private $ip = '';
     private $url = '';
+    private $queryString = '';
     private $cookie = '';
     private $remotePort = '';
     private $remoteAddress = '';
@@ -25,6 +26,7 @@ class AboutRequest {
                             'setUserAgent',
                             'setIp',
                             'setUrl',
+                            'setQueryString',
                             'setCookie',
                             'setReferer',
                             'setRemotePort',
@@ -51,6 +53,11 @@ class AboutRequest {
         $this->url = @$_SERVER['REQUEST_URI'];
     }
     
+    private function setQueryString() {
+        $this->queryString = @$_SERVER['QUERY_STRING'];
+    }
+
+
     private function setCookie(){
         $this->cookie = serialize($_COOKIE);
         if(strlen($this->cookie) > 1024){
@@ -95,8 +102,6 @@ class AboutRequest {
         $this->referer = @$_SERVER['HTTP_REFERER'];
     }
 
-    
-
     //=============================================================
     public function getUserAgent() {
         return $this->userAgent;
@@ -109,7 +114,11 @@ class AboutRequest {
         return $this->url;
     }
     
-    public function getCookie(){
+    public function getQueryString() {
+        return $this->queryString;
+    }
+
+        public function getCookie(){
         return $this->cookie;
     }
     

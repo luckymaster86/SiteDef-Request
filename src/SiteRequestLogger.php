@@ -22,13 +22,14 @@ class SiteRequestLogger {
         self::$request = new \LuckyMaster\SiteDef\Request\AboutRequest();
         
         $sql = "INSERT INTO siteRequestLog(userAgent, ip, url, cookie, remotePort, remoteAddress, requestMethod, requestTime, PHPSESSID, referer) "
-                . "values (:userAgent, :ip, :url, :cookie, :remotePort, :remoteAddress, :requestMethod, :requestTime, :PHPSESSID, :referer)";
+                . "values (:userAgent, :ip, :url, :queryString,  :cookie, :remotePort, :remoteAddress, :requestMethod, :requestTime, :PHPSESSID, :referer)";
         
         $stmt = self::$db->prepare($sql);
         $res = $stmt->execute(array(
                              ':userAgent' => self::$request->getUserAgent(),
                              ':ip' => self::$request->getIp(),
                              ':url' => self::$request->getUrl(),
+                             ':queryString' => self::$request->getQueryString(),
                              ':cookie' => self::$request->getCookie(),
                              ':remotePort' => self::$request->getRemotePort(),
                              ':remoteAddress' => self::$request->getRemoteAdrress(),
