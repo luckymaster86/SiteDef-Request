@@ -2,6 +2,7 @@ CREATE TABLE `siteRequestLog` (
  `id` bigint(20) NOT NULL AUTO_INCREMENT,
  `ip` text NOT NULL,
  `url` text NOT NULL,
+ `queryString` text,
  `PHPSESSID` text,
  `requestTime` text,
  `loggedTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -12,4 +13,4 @@ CREATE TABLE `siteRequestLog` (
  `remoteAddress` text,
  `requestMethod` text,
  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8
